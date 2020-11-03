@@ -123,12 +123,23 @@ a.brand {
   font-size: 1.5rem;
   font-family: "Proxima-Semibold", Fallback, sans-serif;
 }
+
+.badge {
+  background-color: #f02020;
+  color: #ffffff;
+  border-radius: 50%;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  margin-left: 0.5rem;
+}
+
 .row {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
+
 .row.center {
   justify-content: center;
 }
