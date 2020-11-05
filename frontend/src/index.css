@@ -59,7 +59,6 @@ footer {
 /*Common*/
 h1 {
   font-size: 2rem;
-  padding: 1rem 0;
 }
 
 h2 {
@@ -219,4 +218,39 @@ img.large {
 .alert-danger {
   color: #a02020;
   background-color: #ffe0e0;
+}
+
+/* Form */
+.form {
+  max-width: 60rem;
+  margin: 0 auto;
+}
+.form > div {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+.form label {
+  margin: 1rem 0;
+  display: block;
+}
+/* Dropdown */
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+.dropdown-content {
+  position: absolute;
+  display: none;
+  right: 0;
+  min-width: 10rem;
+  padding: 1rem;
+  z-index: 1;
+  background-color: #000000;
+  margin: 0;
+  margin-top: 1rem;
+  border-radius: 0.2rem;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
 }
