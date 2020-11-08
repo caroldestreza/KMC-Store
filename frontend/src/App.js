@@ -10,6 +10,7 @@ import ShippingAddressScreen from "./screens/ShippingAddressScreen";
 import { signout } from "./actions/userActions";
 import PaymentMethodScreen from "./screens/PaymentMethodScreen";
 import PlaceOrderScreen from "./screens/PlaceOrderScreen";
+import logo from "./branding/KMC Store.png";
 
 function App() {
   const cart = useSelector((state) => state.cart);
@@ -27,8 +28,8 @@ function App() {
       <div className="grid-container">
         <header className="row">
           <div>
-            <Link className="brand" to="/">
-              KMC Solutions
+            <Link to="/">
+              <img src={logo} alt={logo} className="brand" />
             </Link>
           </div>
           <div>
@@ -65,7 +66,7 @@ function App() {
           <Route path="/" component={HomeScreen} exact></Route>
         </main>
         <footer className="row center">
-          <small>All rights reserved.</small>
+          <small>Copyright © KMC Solutions 2020</small>
         </footer>
       </div>
     </BrowserRouter>
