@@ -11,6 +11,7 @@ import { signout } from "./actions/userActions";
 import PaymentMethodScreen from "./screens/PaymentMethodScreen";
 import PlaceOrderScreen from "./screens/PlaceOrderScreen";
 import logo from "./branding/KMC Store.png";
+import OrderScreen from "./screens/OrderScreen";
 
 function App() {
   const cart = useSelector((state) => state.cart);
@@ -63,6 +64,7 @@ function App() {
           <Route path="/shipping" component={ShippingAddressScreen}></Route>
           <Route path="/payment" component={PaymentMethodScreen}></Route>
           <Route path="/placeorder" component={PlaceOrderScreen}></Route>
+          <Route path="/order/:id" component={OrderScreen}></Route>
           <Route path="/" component={HomeScreen} exact></Route>
         </main>
         <footer className="row center">
