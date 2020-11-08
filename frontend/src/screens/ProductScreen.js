@@ -26,11 +26,11 @@ export default function ProductScreen(props) {
       ) : error ? (
         <MessageBox variant="danger">{error}</MessageBox>
       ) : (
-        <div>
-          <Link top="/" className="link">
+        <div className="container-fluid">
+          {/* <Link top="/" className="link">
             Back to Result
-          </Link>
-          <div className="row top">
+          </Link> */}
+          <div className="row top container">
             <div className="col-2">
               <img
                 className="large"
@@ -39,7 +39,7 @@ export default function ProductScreen(props) {
               ></img>
             </div>
             <div className="col-1">
-              <ul>
+              <ul className="mb-4">
                 <li>
                   <h1>{product.name}</h1>
                 </li>
@@ -49,19 +49,17 @@ export default function ProductScreen(props) {
                     numReviews={product.numReviews}
                   ></Rating>
                 </li>
-                <li>Price: ${product.price}</li>
+                <li>Price: ₱{product.price}</li>
                 <li>
                   Description: <p>{product.description}</p>
                 </li>
               </ul>
-            </div>
-            <div className="col-1">
               <div className="card card-body">
                 <ul>
                   <li>
                     <div className="row">
                       <div>Price</div>
-                      <div className="price">${product.price}</div>
+                      <div className="price">₱{product.price}</div>
                     </div>
                   </li>
                   <li>

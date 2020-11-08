@@ -10,6 +10,12 @@
   font-family: "Proxima-Extrabold";
   src: url("./fonts/PROXIMANOVA-EXTRABOLD.OTF");
 }
+
+:root {
+  --primary-orange: #f99d3a;
+  --paragraph-color: #333333;
+}
+
 html {
   font-size: 1 rem;
   box-sizing: border-box;
@@ -22,6 +28,7 @@ body {
   font-family: "Proxima", Fallback, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: var(--paragraph-color);
 }
 
 #root {
@@ -47,7 +54,6 @@ header {
 
 main {
   grid-area: main;
-  padding: 1rem;
 }
 
 footer {
@@ -59,19 +65,35 @@ footer {
 /*Common*/
 h1 {
   font-size: 2rem;
-  line-height: 2rem;
+  line-height: 1.5;
+  margin-top: 0;
+  font-family: "Proxima-Extrabold", Fallback, sans-serif;
 }
 
 h2 {
   font-size: 1.5rem;
-  line-height: 1.5rem;
+  line-height: 1.5;
+  margin-top: 0;
+  font-family: "Proxima-Semibold", Fallback, sans-serif;
 }
-
+h3 {
+  font-size: 1.1rem;
+  line-height: 1.2;
+  margin-top: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+.title-centered {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.orange-text {
+  color: var(--primary-orange);
+}
 a {
   text-decoration: none;
 }
 a:hover {
-  color: #f99d3a;
+  color: var(--primary-orange);
 }
 ul {
   padding: 0;
@@ -81,6 +103,7 @@ ul {
 li {
   margin-top: 1rem;
 }
+/*Buttons*/
 input,
 select,
 textarea,
@@ -104,14 +127,41 @@ button:hover {
   border: 0.1rem #404040 solid;
 }
 button.primary {
+  background-color: #fccb44;
+  border-color: #fccb44;
+}
+button.primary:hover {
   background-color: #f0c040;
 }
 button.block {
   width: 100%;
 }
+.btn-danger {
+  background-color: #dc3545;
+  border-color: #dc3545;
+  color: #fff;
+}
+.btn-success {
+  background-color: #28a745;
+  border-color: #28a745;
+  color: #fff;
+}
 .link {
   margin-bottom: 1rem;
   display: block;
+}
+/*Paddings and Margins*/
+.mt-5 {
+  margin-top: 3rem;
+}
+.mt-4 {
+  margin-top: 1.5rem;
+}
+.mb-5 {
+  margin-bottom: 3rem;
+}
+.mb-4 {
+  margin-bottom: 1.5rem;
 }
 /*Header*/
 header a {
@@ -122,12 +172,15 @@ header a {
   height: 30px;
   width: auto;
 }
-
+.kv {
+  background-image: url("./branding/Key-Visual.jpg");
+  height: 500px;
+}
 .badge {
   background-color: #f02020;
   color: #ffffff;
   border-radius: 50%;
-  padding: 0.25rem 0.5rem;
+  padding: 0.3rem 0.5rem;
   font-size: 0.75rem;
   margin-left: 0.5rem;
 }
@@ -139,6 +192,13 @@ header a {
   align-items: center;
 }
 
+.container-fluid {
+  padding: 60px 0;
+}
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
 .row.center {
   justify-content: center;
 }
@@ -158,14 +218,14 @@ header a {
 /*Images*/
 img {
   /* border-radius: 0.5rem 0.5rem 0 0; */
-  border-radius: 0.5rem;
+  border-radius: 0.25rem;
 }
 img.small {
   max-width: 5rem;
   width: 100%;
 }
 img.medium {
-  max-width: 400px;
+  max-width: 300px;
   width: 100%;
 }
 img.large {
@@ -176,20 +236,25 @@ img.large {
 .card {
   border: 0.1rem #c0c0c0 solid;
   background-color: #f8f8f8;
-  border-radius: 0.5rem;
-  margin: 1rem;
+  border-radius: 0.25rem;
+  margin: 1rem 1rem 1rem 0;
 }
 .card-body {
-  padding: 0.5rem;
+  padding: 1rem;
 }
 .card-body > * {
   margin-bottom: 0.5rem;
 }
+.card-product {
+  border: 0.1rem #c0c0c0 solid;
+  background-color: #f8f8f8;
+  border-radius: 0.25rem;
+  margin: 1rem;
+}
 .price {
-  font-size: 1.8rem;
+  font-size: 1.1rem;
   font-family: "Proxima-Semibold", Fallback, sans-serif;
 }
-
 /*Rating*/
 .rating span {
   color: #f0c040;
@@ -222,7 +287,6 @@ img.large {
   color: #a02020;
   background-color: #ffe0e0;
 }
-
 /* Form */
 .form {
   max-width: 60rem;
